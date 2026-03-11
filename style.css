@@ -1,7 +1,7 @@
 /* General Setup */
 body {
     font-family: Helvetica, Arial, sans-serif;
-    margin: 0;
+    margin: 0;2c3e50
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
@@ -21,7 +21,7 @@ nav a {
     font-weight: bold;
 }
 nav a:hover {
-    color: #3498db;
+    color: #2c3e50;
 }
 
 /* Page Containers */
@@ -40,7 +40,7 @@ nav a:hover {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #2B4F4F;
+    border: 4px solid #2c3e50;
 }
 
 /* Photo Galleries (Travel & Events) */
@@ -76,7 +76,7 @@ nav a:hover {
 }
 .category h2 {
     color: #2c3e50;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #2c3e50;
     padding-bottom: 10px;
 }
 .category ul {
@@ -88,7 +88,7 @@ nav a:hover {
 }
 .category a {
     text-decoration: none;
-    color: #3498db;
+    color: #2c3e50;
     font-weight: bold;
 }
 .category a:hover {
@@ -98,7 +98,7 @@ nav a:hover {
 /* Project Sub-Page Files */
 .file-link {
     display: inline-block;
-    background: #3498db;
+    background: #2c3e50;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
