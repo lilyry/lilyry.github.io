@@ -1,7 +1,7 @@
 /* General Setup */
 body {
     font-family: Helvetica, Arial, sans-serif;
-    margin: 0;2c3e50
+    margin: 0; 
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
@@ -131,4 +131,36 @@ nav a:hover {
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 15px;
+}
+
+/* 4x4 Image Grid */
+.grid-4x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Forces exactly 4 columns */
+    gap: 20px; /* Space between images */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.grid-4x4 img {
+    width: 100%;
+    /* We use an aspect ratio to make them all perfect squares. 
+       If your images are rectangles and you don't want them cropped, delete the next 2 lines */
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease-in-out; /* Optional: adds a smooth effect */
+}
+
+/* Optional: Makes the image pop out slightly when you hover over it */
+.grid-4x4 img:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive design for tablets and phones */
+@media (max-width: 800px) {
+    .grid-4x4 {
+        grid-template-columns: repeat(2, 1fr); /* Changes to 2 columns on small screens */
+    }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Project 1</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../events.html">Events</a>
+        <a href="../travel.html">Travel</a>
+        <a href="../contact.html">Contact Me</a>
+    </nav>
+
+    <div class="container">
+        <a href="../projects.html" style="text-decoration: none; color: gray;">&larr; Back to Projects</a>
+        
+        <h1>Article: How This Year’s Summit Helped Two Big 10 Campuses Win</h1>
+        <p>Read my article here or on Interfaith America's website: https://www.interfaithamerica.org/article/summit-big-10-campuses-win/</p>
+        
+        <!-- PDF PREVIEW GALLERY -->
+        <div class="pdf-gallery">
+            
+            <!-- PDF 1 -->
+            <div class="pdf-card">
+                <h3>Article </h3>
+                <!-- The #page=1&toolbar=0&view=FitH forces the browser to show page 1 and hide menus -->
+                <iframe src="../files/How This Year's Summit Helped Two Big 10 Campuses Win - Interfaith America.pdf" class="pdf-preview"></iframe>
+                <a href="../files/How This Year's Summit Helped Two Big 10 Campuses Win - Interfaith America.pdf" target="_blank" class="file-link">Open Full PDF</a>
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
