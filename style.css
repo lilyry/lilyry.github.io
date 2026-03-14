@@ -199,3 +199,62 @@ nav a:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Adds a shadow to make the slide pop */
     border-radius: 4px;
 }
+
+/* Storyboard Grid Layout */
+.storyboard-grid {
+    display: grid;
+    /* Auto-fit will automatically create columns based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.storyboard-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer; /* Changes the mouse to a pointing hand to indicate it is clickable */
+    transition: transform 0.2s ease-in-out;
+}
+
+.storyboard-grid img:hover {
+    transform: scale(1.03); /* Slight zoom when hovering */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Lightbox (Popup for clicking images) */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Puts it on top of everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 95%; /* Maximizes the size so text is easy to read */
+    max-height: 95%;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: #ccc;
+}

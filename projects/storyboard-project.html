@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stories from the University YMCA</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../events.html">Events</a>
+        <a href="../travel.html">Travel</a>
+        <a href="../contact.html">Contact Me</a>
+    </nav>
+
+    <div class="container">
+        <a href="../projects.html" style="text-decoration: none; color: gray;">&larr; Back to Projects</a>
+        
+        <h1>Stories from the University YMCA</h1>
+        <p>A collection of 19 interviews and portraits highlighting the personal stories of those involved with the University YMCA. <strong>Click on any storyboard to enlarge it and read the interview.</strong></p>
+        
+        <!-- Storyboard Grid -->
+        <div class="storyboard-grid">
+            <img src="../images/storyboards/1.png" alt="Storyboard 1" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/2.png" alt="Storyboard 2" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/3.png" alt="Storyboard 3" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/4.png" alt="Storyboard 4" loading="lazy" onclick="openLightbox(this.src)">
+            
+            <img src="../images/storyboards/5.png" alt="Storyboard 5" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/6.png" alt="Storyboard 6" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/7.png" alt="Storyboard 7" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/8.png" alt="Storyboard 8" loading="lazy" onclick="openLightbox(this.src)">
+            
+            <img src="../images/storyboards/9.png" alt="Storyboard 9" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/10.png" alt="Storyboard 10" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/11.png" alt="Storyboard 11" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/12.png" alt="Storyboard 12" loading="lazy" onclick="openLightbox(this.src)">
+            
+            <img src="../images/storyboards/13.png" alt="Storyboard 13" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/14.png" alt="Storyboard 14" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/15.png" alt="Storyboard 15" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/16.png" alt="Storyboard 16" loading="lazy" onclick="openLightbox(this.src)">
+            
+            <img src="../images/storyboards/17.png" alt="Storyboard 17" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/18.png" alt="Storyboard 18" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="../images/storyboards/19.png" alt="Storyboard 19" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+    </div>
+
+    <!-- The Lightbox/Modal (Hidden by default) -->
+    <!-- Clicking anywhere on the dark background will also close it -->
+    <div id="myLightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" alt="Enlarged Storyboard">
+    </div>
+
+    <!-- JavaScript to make the Lightbox work -->
+    <script>
+        function openLightbox(imageSrc) {
+            var lightbox = document.getElementById('myLightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            
+            // Set the clicked image as the source for the popup
+            lightboxImg.src = imageSrc;
+            
+            // Show the lightbox (flex is used to center the image)
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            var lightbox = document.getElementById('myLightbox');
+            // Hide the lightbox
+            lightbox.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
