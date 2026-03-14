@@ -109,3 +109,26 @@ nav a:hover {
 .file-link:hover {
     background: #2980b9;
 }
+
+/* PDF Preview Grid */
+.pdf-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.pdf-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.pdf-preview {
+    width: 100%;
+    height: 400px; /* This controls how tall the preview is */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
