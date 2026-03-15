@@ -19,9 +19,14 @@
     <div class="container">
         <div class="hero-collage-container">
     <div class="hero-text">
-        <h1>Lily</h1>
-        <p>It's me!</p>
-        <a href="contact.html" class="file-link">Get in Touch</a>
+        <!-- The Javascript will automatically type inside this H1 -->
+        <h1 id="typewriter"></h1>
+        
+        <!-- This div keeps the text hidden until the typing is done -->
+        <div class="fade-in-content">
+            <p>I'm a student at the Universirty of Illinois Urbana Champaign graduating with a B.S. in Information Scince + Data Scienece with a Minor in Global Studies in May 2026. I made this website to share my projects, events, and travels.</p>
+            <a href="contact.html" class="file-link">Get in Touch</a>
+        </div>
     </div>
     
     <div class="hero-images">
@@ -33,7 +38,24 @@
         <img src="images/me-talking2.jpeg" alt="Work Interest" class="overlap-2">
     </div>
 </div>
-    </div>
 
+<!-- JavaScript for the Typewriter Effect -->
+<script>
+    // 1. Put the exact text you want typed out inside these quotes
+    const textToType = "Welcome, I'm Lily";
+    const typingSpeed = 60; // Speed in milliseconds (lower is faster)
+    let i = 0;
+
+    function typeWriter() {
+        if (i < textToType.length) {
+            document.getElementById("typewriter").innerHTML += textToType.charAt(i);
+            i++;
+            setTimeout(typeWriter, typingSpeed);
+        }
+    }
+
+    // Start the typing effect as soon as the page loads
+    window.onload = typeWriter;
+</script>
 </body>
 </html>

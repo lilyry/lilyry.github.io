@@ -14,10 +14,11 @@
         <a href="contact.html">Contact Me</a>
     </nav>
 
-    <div class="container">
+   <div class="container">
         <h1>Travels</h1>
+        <p>All images my own. Refresh the page to see the images in a different order.</p>
         
-        <div class="gallery">
+        <div class="gallery" id="travel-gallery">
             <div class="gallery-card">
                 <img src="images/poland/IMG_2363.JPG" alt="Poland">
                 <div class="caption">
@@ -95,8 +96,83 @@
                     <p>Jewish Cemeterty, 2025</p>
                 </div>
             </div>
-
+            <div class="gallery-card">
+                <img src="images/UAE/1.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Dubai, UAE</h3>
+                    <p>Microsoft Headquarters, 2024</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="images/UAE/2.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Dubai, UAE</h3>
+                    <p>Jewish Cemeterty, 2025</p>
+                </div>
+                </div>
+            <div class="gallery-card">
+                <img src="images/UAE/5.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Dubai, UAE</h3>
+                    <p>Cinema Akil, 2024</p>
+                </div>
+            <div class="gallery-card">
+                <img src="images/UAE/6.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Dubai, UAE</h3>
+                    <p>NYU Abu Dhabi Robotics, 2024</p>
+                </div>
+            <div class="gallery-card">
+                <img src="images/UAE/7.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Dubai, UAE</h3>
+                    <p>Beach, 2024</p>
+                </div>
+            <div class="gallery-card">
+                <img src="images/UAE/8.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Abu Dhabi, UAE</h3>
+                    <p>Sheikh Zayed Grand Mosque, 2024</p>
+                </div>
+            <div class="gallery-card">
+                <img src="images/UAE/9.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Abu Dhabi, UAE</h3>
+                    <p>Falcon, 2024</p>
+                </div>
+            <div class="gallery-card">
+                <img src="images/UAE/10.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Abu Dhabi, UAE</h3>
+                    <p>M2 Office, 2024</p>
+                </div>
+            <div class="gallery-card">
+                <img src="images/UAE/11.jpg" alt="UAE">
+                <div class="caption">
+                    <h3>Abu Dhabi, UAE</h3>
+                    <p>Fountain at Sheikh Zayed Grand Mosque, 2024</p>
+                </div>
         </div>
     </div>
+
+    <!-- JavaScript to handle Randomization -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            const gallery = document.getElementById('travel-gallery');
+            // Grab all the individual photo cards
+            const cards = Array.from(gallery.querySelectorAll('.gallery-card'));
+
+            // Shuffle them using the Fisher-Yates algorithm
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cards[i], cards[j]] = [cards[j], cards[i]];
+            }
+
+            // Put them back into the gallery in the new random order
+            cards.forEach(card => gallery.appendChild(card));
+
+        });
+    </script>
 </body>
 </html>
