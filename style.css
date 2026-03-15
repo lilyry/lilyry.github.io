@@ -51,7 +51,7 @@ nav a:hover {
     margin-top: 20px;
 }
 .gallery-card {
-    background: white;
+    background: rgb(232, 232, 232);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -62,7 +62,7 @@ nav a:hover {
     object-fit: cover;
 }
 .gallery-card .caption {
-    padding: 15px;
+    padding: 1px;
     text-align: center;
 }
 
