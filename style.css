@@ -258,3 +258,66 @@ nav a:hover {
 .lightbox-close:hover {
     color: #ccc;
 }
+
+/*Professional Collage */
+.hero-collage-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 50px;
+}
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+.hero-images {
+    flex: 1;
+    position: relative;
+    max-width: 400px;
+    height: 450px;
+}
+.main-portrait {
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+.overlap-1 {
+    width: 45%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 4px solid #2c3e50; /* Matches background color to create a cutout effect */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+.overlap-2 {
+    width: 40%;
+    aspect-ratio: 4/4;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 4px solid #2c3e50;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    z-index: 2;
+}
+
+/* Mobile Fix */
+@media (max-width: 800px) {
+    .hero-collage-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text { text-align: center; }
+    .hero-images { margin-top: 30px; height: 350px; }
+}
