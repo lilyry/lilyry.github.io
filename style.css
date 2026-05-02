@@ -65,6 +65,13 @@ nav a:hover {
     padding: 1px;
     text-align: center;
 }
+/* For portrait posters – show the full image, no cropping */
+.poster-card img {
+    height: auto !important;        /* let the image keep its natural height */
+    object-fit: contain !important; /* show the entire image, might leave empty space */
+    /* Optional: you can add a max-height to prevent extreme tall images */
+    /* max-height: 600px; */
+}
 
 /* Project Categories */
 .category {
