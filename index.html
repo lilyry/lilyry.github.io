@@ -18,44 +18,74 @@
 
     <div class="container">
         <div class="hero-collage-container">
-    <div class="hero-text">
-        <!-- The Javascript will automatically type inside this H1 -->
-        <h1 id="typewriter"></h1>
-        
-        <!-- This div keeps the text hidden until the typing is done -->
-        <div class="fade-in-content">
-            <p>I'm a student at the Universirty of Illinois Urbana Champaign graduating with a B.S. in Information Scince + Data Scienece with a Minor in Global Studies in May 2026. I created this website to share my projects, events, and travels.</p>
-            <a href="contact.html" class="file-link">Get in Touch</a>
+            <div class="hero-text">
+                <h1 id="typewriter">Hello, I'm Lily</h1>
+
+                <div>
+                    <p class="hero-tagline">— lilyrybka.com —</p>
+                    <p>I'm a student at the University of Illinois Urbana Champaign graduating with a B.S. in Information Science + Data Science with a Minor in Global Studies in May 2026. I created this website to share my projects, events, and travels.</p>
+                    <a href="contact.html" class="file-link">Get in Touch</a>
+                </div>
+            </div>
+
+            <div class="hero-images">
+                <img src="images/me-cropped.jpg" alt="Picture of Me" class="main-portrait">
+                <!-- <img src="images/Y_award_jim.jpg" alt="Award Ceremony" class="overlap-3"> -->
+                <img src="images/poland/IMG_2489.JPG" alt="Travel" class="overlap-1">
+                <img src="images/me-talking2.jpeg" alt="Speaking" class="overlap-2">
+                <img src="images/lily_grad_crop_1.jpg" alt="Graduation" class="overlap-3">
+            </div>
         </div>
+        <!-- Pathway Cards -->
+        <section class="pathway-section">
+            <div class="pathway-cards">
+                <a href="projects.html" class="pathway-card">
+                    <div class="pathway-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21C7 21 4 16 4 12C4 8 7.5 3 12 2C16.5 3 20 8 20 12C20 16 17 21 12 21Z" stroke="#2D5A3D" stroke-width="1.5" stroke-linejoin="round"/>
+                            <line x1="12" y1="21" x2="12" y2="7" stroke="#2D5A3D" stroke-width="1.5"/>
+                            <line x1="12" y1="13" x2="16" y2="9" stroke="#2D5A3D" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Projects</h3>
+                    <p>data, guides, research, articles...</p>
+                </a>
+
+                <a href="events.html" class="pathway-card">
+                    <div class="pathway-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="5" width="18" height="16" rx="2" stroke="#2D5A3D" stroke-width="1.5"/>
+                            <line x1="3" y1="10" x2="21" y2="10" stroke="#2D5A3D" stroke-width="1.5"/>
+                            <line x1="8" y1="3" x2="8" y2="7" stroke="#2D5A3D" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="16" y1="3" x2="16" y2="7" stroke="#2D5A3D" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="12" cy="15" r="1.5" fill="#2D5A3D"/>
+                        </svg>
+                    </div>
+                    <h3>Events</h3>
+                    <p>some events I organized...</p>
+                </a>
+
+                <a href="travel.html" class="pathway-card">
+                    <div class="pathway-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="9" stroke="#2D5A3D" stroke-width="1.5"/>
+                            <path d="M12 3C9.5 6 9.5 18 12 21" stroke="#2D5A3D" stroke-width="1.5"/>
+                            <path d="M12 3C14.5 6 14.5 18 12 21" stroke="#2D5A3D" stroke-width="1.5"/>
+                            <line x1="3" y1="12" x2="21" y2="12" stroke="#2D5A3D" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Travel</h3>
+                    <p>my travel photos...</p>
+                </a>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <pre class="cat-easter-egg"> /\_/\
+( o.o )
+ &gt; ^ &lt;</pre>
+        </footer>
     </div>
-    
-    <div class="hero-images">
-        <!-- Main Portrait -->
-        <img src="images/me-cropped.jpg" alt="Picture of Me" class="main-portrait">
-        <!-- Overlapping Interest 1 (e.g., Travel or Event) -->
-        <img src="images/poland/IMG_2489.JPG" alt="Travel Interest" class="overlap-1">
-        <!-- Overlapping Interest 2 (e.g., Data, Storyboard, or YMCA) -->
-        <img src="images/me-talking2.jpeg" alt="Work Interest" class="overlap-2">
-    </div>
-</div>
 
-<!-- JavaScript for the Typewriter Effect -->
-<script>
-    // 1. Put the exact text you want typed out inside these quotes
-    const textToType = "Welcome, I'm Lily";
-    const typingSpeed = 60; // Speed in milliseconds (lower is faster)
-    let i = 0;
-
-    function typeWriter() {
-        if (i < textToType.length) {
-            document.getElementById("typewriter").innerHTML += textToType.charAt(i);
-            i++;
-            setTimeout(typeWriter, typingSpeed);
-        }
-    }
-
-    // Start the typing effect as soon as the page loads
-    window.onload = typeWriter;
-</script>
 </body>
 </html>

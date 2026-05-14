@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban & Rural Divides in U.S. Food Insecurity</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin: 20px 0 32px;
+        }
+        .finding-card {
+            background: #FFFFFF;
+            border: 1px solid #E8DDD0;
+            border-left: 4px solid #2D5A3D;
+            border-radius: 6px;
+            padding: 16px 18px;
+        }
+        .finding-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #2A2420;
+            line-height: 1.5;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0 24px;
+        }
+        .tech-tag {
+            background: #1E3A5F;
+            color: white;
+            border-radius: 4px;
+            padding: 4px 12px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #2D5A3D;
+            margin-bottom: 6px;
+        }
+        .research-questions {
+            background: #E8DDD0;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 16px 0 32px;
+        }
+        .research-questions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .research-questions li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .research-questions li:last-child {
+            margin-bottom: 0;
+        }
+        .data-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .data-card {
+            flex: 1;
+            background: #FFFFFF;
+            border: 1px solid #E8DDD0;
+            border-radius: 6px;
+            padding: 14px 16px;
+        }
+        .data-card strong {
+            display: block;
+            color: #1E3A5F;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+        .data-card p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: #2A2420;
+            line-height: 1.4;
+        }
+        @media (max-width: 600px) {
+            .data-row { flex-direction: column; }
+        }
+        .embed-wrapper {
+            margin-top: 16px;
+            border: 1px solid #E8DDD0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../events.html">Events</a>
+        <a href="../travel.html">Travel</a>
+        <a href="../contact.html">Contact Me</a>
+    </nav>
+
+    <div class="container">
+        <a href="../projects.html" style="text-decoration: none; color: gray;">&larr; Back to Projects</a>
+
+        <h1>Urban &amp; Rural Divides in U.S. Food Insecurity</h1>
+        <p>This project examines food insecurity patterns across rural and urban counties in the United States, merging a publicly available federal datasets with semi-private data from Feeding America. This project includes reproducible Python analysis. Completed with collaborator Lara Terpetschnig (Team: Canaries) as our final project for IS467, Data Maangement, Curation and Reproduction at the University of Illinois Urbana-Champaign. </p>
+        <p> Note: This project focuses on data collection, management, and cleaning steps. </p>
+
+        <a href="https://github.com/LaraTerpetschnig/Canaries" target="_blank" class="file-link">View Project on GitHub</a>
+        <h3>Tech & Skills</h3>
+        <div class="tech-tags">
+            <span class="tech-tag">Python 3.12</span>
+            <span class="tech-tag">pandas</span>
+            <span class="tech-tag">geopandas</span>
+            <span class="tech-tag">OLS Regression</span>
+            <span class="tech-tag">Jupyter Notebooks</span>
+            <span class="tech-tag">Choropleth Mapping</span>
+        </div>
+        <h3>Methods</h3>
+        <p>Data from both sources were merged on standardized FIPS county codes. Tract-level FARA data was aggregated to the county level, and linear regression was used to compare population and rural/urban designation as predictors of food insecurity. Geographic visualizations were produced with <code>geopandas</code> using U.S. Census Bureau shapefiles.</p>
+
+        <h3 style="margin-top: 36px;">Research Questions</h3>
+        <div class="research-questions">
+            <ol>
+                <li>Do rural families experience higher food insecurity rates than urban families — both nationally and state-by-state?</li>
+                <li>How do food access and food insecurity indicators overlap geographically, and what combined insights emerge?</li>
+                <li>Which U.S. counties face the most severe food insecurity, and what contributing factors drive this?</li>
+            </ol>
+        </div>
+
+        <h3>Findings</h3>
+        <div class="findings-grid">
+            <div class="finding-card">
+                <p>Rural counties consistently show <strong>higher food insecurity rates</strong> than urban counties across most U.S. states.</p>
+            </div>
+            <div class="finding-card">
+                <p>The <strong>Rural-Urban Continuum Code</strong> is a stronger predictor of food insecurity than raw population counts.</p>
+            </div>
+            <div class="finding-card">
+                <p><strong>Poverty</strong> emerges as a critical additional factor — food access and food insecurity overlap imperfectly.</p>
+            </div>
+            <div class="finding-card">
+                <p><strong>Southern states</strong> experience the highest food insecurity rates; Mississippi has the worst state-level average.</p>
+            </div>
+            <div class="finding-card">
+                <p>Issaquena County, MS (62.2% Black population) has the nation's <strong>highest food insecurity rate</strong> at the county level.</p>
+            </div>
+            <div class="finding-card">
+                <p><strong>Native American reservations</strong> face acute vulnerability — e.g., Oglala Lakota County, South Dakota.</p>
+            </div>
+        </div>
+
+        <h3>Data Sources</h3>
+        <div class="data-row">
+            <div class="data-card">
+                <strong>Food Access Research Atlas (FARA)</strong>
+                <p>Census-tract-level food access indicators from the USDA Economic Research Service. 72,864 tracts aggregated to 3,142 counties. CC0 public domain license.</p>
+            </div>
+            <div class="data-card">
+                <strong>Map the Meal Gap (MMG)</strong>
+                <p>County-level food insecurity estimates from Feeding America (2019 data). Restricdata must be requested from the institutional repository.</p>
+            </div>
+        </div>
+
+        <h3>Deliverables</h3>
+        <p>The project includes 8 analytical Jupyter notebooks covering data cleaning, quality assurance, and modeling; a merged county-level dataset; choropleth maps filtered by demographic category; SHA hash digests for data integrity; and a fully reproducible analysis pipeline.</p>
+
+        <h3 style="margin-top: 36px;">Repository</h3>
+        <p>Notebooks, data documentation, and visualizations.</p>
+        <div class="embed-wrapper">
+            <iframe
+                src="https://nbviewer.org/github/LaraTerpetschnig/Canaries/"
+                width="100%"
+                height="600"
+                style="border: none; display: block;"
+                title="Canaries Project — nbviewer"
+            ></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
